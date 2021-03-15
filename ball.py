@@ -9,4 +9,4 @@ class Ball:
         self.ball_speed = 10
 
     def start(self):
-
+        pass
