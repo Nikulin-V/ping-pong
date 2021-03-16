@@ -12,7 +12,7 @@ class Block(Surface):
         self.margin = margin
         self.speed = speed
         self.player = player
-        self.x = self.x = main_screen.get_width() // 2 - self.width // 2
+        self.x = main_screen.get_width() // 2 - self.width // 2
         self.y = 0
 
     def go_right(self):
