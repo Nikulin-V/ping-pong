@@ -1,10 +1,12 @@
 import pygame as pg
+from pygame import Surface
 from block import Block
 
 
 class ClickHandler:
-    def __init__(self, window_width):
-        self.window_width = window_width
+    def __init__(self, main_screen: Surface):
+        self.main_screen = main_screen
+        self.window_width = main_screen.get_width()
 
         self.left1_key = pg.K_a
         self.right1_key = pg.K_d
@@ -25,6 +27,11 @@ class ClickHandler:
             self.left2_key_pressed = True
         elif key == self.right2_key:
             self.right2_key_pressed = True
+        elif key == pg.K_SPACE:
+            from main_screen import MainScreen
+            self.main_screen: MainScreen
+            self.main_screen.score.start()
+            self.main_screen.ball.start()
 
     def key_up(self, key):
         if key == self.left1_key:
