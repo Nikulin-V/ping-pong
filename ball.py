@@ -35,7 +35,7 @@ class Ball(Surface):
                 and block1.x <= self.x <= block1.x + block1.width:
             self.change_degrees_up()
         elif block2.margin <= self.main_screen.get_height() -\
-                (self.y + self.radius) <= block2.margin + block2.height\
+                (self.y - self.radius) <= block2.margin + block2.height\
                 and block2.x <= self.x <= block2.x + block2.width:
             self.change_degrees_down()
         elif self.y <= 0:
